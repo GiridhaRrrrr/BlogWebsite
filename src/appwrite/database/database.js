@@ -14,6 +14,7 @@ export class DatabaseServices{
     }
 
     async createPost({title, slug, content, featuredImage, status, userId}){
+        // here featuredImage is a url that comes from the storage.
         try {
 
             return await this.database.createDocument(

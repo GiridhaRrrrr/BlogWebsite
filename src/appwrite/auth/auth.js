@@ -22,7 +22,7 @@ export class AuthServices{
 
             if(userAccount){
                 // if registered we let him login
-                return this.logIn(email, password);
+                return this.logIn({email, password});
             }
             else{
                 return userAccount;
@@ -36,7 +36,8 @@ export class AuthServices{
 
     async logIn({email, password}){
         try {
-            return await this.account.createEmailPasswordSession(email, password);                    
+            const session =  await this.account.createEmailPasswordSession(email, password);   
+            return session;                 
         } catch (error) {
             throw error;            
         }
