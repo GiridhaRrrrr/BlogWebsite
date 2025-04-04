@@ -21,7 +21,8 @@ const Input = React.forwardRef(function Input(
                 outline-none focus:bg-gray-50duration-200 border-grey-200 w-full
                  ${className}`}  
                  ref={ref}
-                 id={id}                              
+                 id={id}  
+                 {...props}                            
                 />
             </div>
         )

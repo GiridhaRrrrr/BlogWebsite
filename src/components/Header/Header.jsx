@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Logo, LogOutBtn } from '..'
 import { useSelector} from 'react-redux'
-import { useNavigate } from 'react-router-dom' //use link linkonly but programtically we can redirect
-
-
+import { useNavigate } from 'react-router-dom' //use link only but programtically we can redirect without clicking anything
 
 function Header() {
   const authStatus = useSelector((state) => {state.auth.status})
