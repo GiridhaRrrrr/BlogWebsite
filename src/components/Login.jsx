@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import {login as authLogin} from '../store/authSlice' //this is a way of redeclaring the variable from login to auth login
+import {logIn as authLogin} from '../store/authSlice' //this is a way of redeclaring the variable from login to auth login
 import {Button, Input, Logo} from './index'
 import {useDispatch } from 'react-redux'
 import authServices from '../appwrite/auth/auth'

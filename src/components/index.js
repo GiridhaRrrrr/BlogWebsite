@@ -8,6 +8,11 @@ import SelectField from "./SelectField"
 import Button from "./Button"
 import Login from "./Login";
 import SignUp from "./SignUp"
+import Protected from './AuthLayout'
+import RTE from "./RTE";
+import PostForm from "./post-form/PostForm";
+import AuthLayout from "./AuthLayout"
+import Input from "./Input";
 
 export {
     Header,
@@ -19,5 +24,10 @@ export {
     PostCard,
     Button,
     Login,
-    SignUp
+    SignUp,
+    Protected,
+    RTE,
+    PostForm,
+    AuthLayout,
+    Input,
 } 

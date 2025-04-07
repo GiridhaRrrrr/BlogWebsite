@@ -1,4 +1,4 @@
-// this component is used ti prodect routes its like container where user if logged in only can enter the routes
+// this component is used to prodect routes its like container where user if logged in only can enter the routes
 import React, {useEffect, useState} from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -17,6 +17,8 @@ export default function Protected({children, authentication = true}) {// filenam
         else if(!authentication && authentication !== authStatus){
             navigate('/')
         }
+
+        setloading(false);
     }, [authStatus, navigate, authentication])
     
 

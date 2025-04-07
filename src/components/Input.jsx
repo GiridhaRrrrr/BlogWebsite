@@ -22,7 +22,7 @@ const Input = React.forwardRef(function Input(
                  ${className}`}  
                  ref={ref}
                  id={id}  
-                 {...props}                            
+                 {...props}                              
                 />
             </div>
         )
