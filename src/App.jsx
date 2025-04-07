@@ -10,30 +10,30 @@ function App() {
   const [Loading, SetLoading] = useState(true);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   authServices.getCurrentUser()
-  //   .then((userData) => {
-  //     if(userData){
-  //       dispatch(logIn({userData}));        
-  //     }
-  //     else{
-  //       dispatch(logOut());
-  //     }
-  //   })
-  //   .catch((err) => {
-  //     console.log("error in getting the user", err );
-  //   })
-  //   .finally(
-  //     () => SetLoading(false)
-  //   )
-  // },[])
+  useEffect(() => {
+    authServices.getCurrentUser()
+    .then((userData) => {
+      if(userData){
+        dispatch(logIn({userData}));        
+      }
+      else{
+        dispatch(logOut());
+      }
+    })
+    .catch((err) => {
+      console.log("error in getting the user", err );
+    })
+    .finally(
+      () => SetLoading(false)
+    )
+  },[])
 
  return !Loading ?
   <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
     <div className="w-full block">
       < Header/>
       <main>
-       Todo : {/* <Outlet /> */}
+          <Outlet />
       </main>
       <Fotter />
     </div>    

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
+import config from '../config/config'
 import { Controller } from 'react-hook-form' //does the same work as forward ref but provides extra options
 
 function RTE({name, control, label, defaultValue = ""}) { //this control is responsible to link this component to parent component this comes from parent component
@@ -14,6 +15,7 @@ function RTE({name, control, label, defaultValue = ""}) { //this control is resp
     // it takes the field ie the component on change inform the parent element to rerender and in that callback we write the component ie in this case the editor
         <Editor //this is editor component read it s documentation
         initialValue = {defaultValue}
+        apiKey = {config.tinymce_api}
         init = {{
             initialValue: defaultValue,
             height: 500,

@@ -31,14 +31,13 @@ function Login() {
     }
 
   return (
-    <div className='flex items-center justify-center w-full'>
-        <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl
-        p-10 border border-black/10`}>
-            <div className="mb-2 flex justify-center">
-                <span className="inline-block w-full max-w-[100px]">
-                    <Logo width="100%" />
-                </span>
-            </div>
+    <div className='flex items-center justify-center w-full' >
+                <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border mt-10 mb-10 border-black/10`}>
+                <div className="mb-2 flex justify-center">
+                    <span className="inline-block w-full max-w-[100px]">
+                        <Logo width="100%" />
+                    </span>
+                </div>
             <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
             <p className="mt-2 text-center text-base text-black/60">
                 Don&apos;t have any account?&nbsp;
@@ -54,8 +53,8 @@ function Login() {
             onSubmit={handleSubmit(login)} 
             className='mt-8'
             >
-            //handlesubmit is a event of rect-hook-forms and by this we pass our function login where we defied what to happen if we submit the form
-            //so dont name your function handlesubmit as using register we dont need to manage their states it automatically does that and provides us the data object
+            {/* //handlesubmit is a event of rect-hook-forms and by this we pass our function login where we defied what to happen if we submit the form
+            //so dont name your function handlesubmit as using register we dont need to manage their states it automatically does that and provides us the data object */}
 
             <div className='space-y-5'>
                 {/* input component */}

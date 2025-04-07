@@ -22,6 +22,6 @@ export default function Protected({children, authentication = true}) {// filenam
     }, [authStatus, navigate, authentication])
     
 
-  return loding ? <p>Loading...</p> : {children}
+  return loding ? <p>Loading...</p> : <>{children}</>
 }
 
