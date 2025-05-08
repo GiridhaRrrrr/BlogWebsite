@@ -6,7 +6,7 @@ import { Controller } from 'react-hook-form' //does the same work as forward ref
 function RTE({name, control, label, defaultValue = ""}) { //this control is responsible to link this component to parent component this comes from parent component
   return (
     <div className='w-full'> 
-    {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
+    {label && <label className='inline-block mb-1 pl-1 font-medium text-gray-300'>{label}</label>}
 
     <Controller //this controller only gives control of component to parent component their are few fields in it like name, control,render
     name={name || "content"}
