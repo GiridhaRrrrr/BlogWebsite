@@ -41,13 +41,15 @@ export class StorageService{
 
     async getFilePreview(fileId){
         try {
-            return await this.storage.getFilePreview( // this method do not use await as its not uses database resources still we write it
+             // this method do not use await as its not uses database resources still we write it
+            let url =  this.storage.getFileView(
                 config.appwriteBucketId,
                 fileId,
             )
+            return url;
             
         } catch (error) {
-            console.log("Appwrite service :: deleteFile :: Error" , error);   
+            console.log("Appwrite service :: filepreview :: Error" , error);   
             return false;            
         }
     }
